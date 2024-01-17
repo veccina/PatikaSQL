@@ -5,3 +5,9 @@ GROUP BY rating;
 SELECT replacement_cost, COUNT (*) FROM film
 GROUP BY replacement_cost
 HAVING COUNT (*) > 50;
+-- 3) customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir? 
+SELECT store_id, COUNT (*) FROM customer
+GROUP BY store_id; --cevap store_id 1: 326 -- store_id 2: 273
+-- 4) city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız.
+SELECT country_id,COUNT(country_id) FROM city
+GROUP BY country_id;
